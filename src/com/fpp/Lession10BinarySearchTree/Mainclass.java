@@ -26,11 +26,11 @@ public class Mainclass {
 			myBST.insert(25);
 			
 			
-			System.out.println("Reversal of BST using Pre-Order");
+			System.out.println("Traversal of BST using Pre-Order");
 			myBST.printTreePRE();
-			System.out.println("--------------\nReversal of BST using In-Order");
+			System.out.println("--------------\nTraversal of BST using In-Order");
 			myBST.printTree();
-			System.out.println("--------------\nReversal of BST using Post-Order");
+			System.out.println("--------------\nTraversal of BST using Post-Order");
 			myBST.printTreePOST();
 			
 			System.out.println("--------------");
