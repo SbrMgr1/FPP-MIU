@@ -36,7 +36,7 @@ public class MyBST {
 			System.out.println(t.element);
 			printTreePRE(t.left);
 			printTreePRE(t.right);
-		} // An INORDER Traversal
+		} // An PREORDER Traversal
 	}
 	public void printTreePOST() {
 		if (root == null)
@@ -49,7 +49,7 @@ public class MyBST {
 			printTreePOST(t.left);
 			printTreePOST(t.right);
 			System.out.println(t.element);
-		} // An INORDER Traversal
+		} // An POSTORDER Traversal
 	}
 	// Assume the data in the Node is an Integer.
 	private int countNodes(BinaryNode root) {
