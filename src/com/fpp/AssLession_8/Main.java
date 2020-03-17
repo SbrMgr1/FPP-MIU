@@ -14,6 +14,7 @@ public class Main {
 		Scanner input = new Scanner(System.in);
 
 		LinkedList<Character> linkedListA = new LinkedList<Character>();
+		
 		LinkedList<Character> linkedListB = new LinkedList<Character>();
 		LinkedList<Character> linkedListC = new LinkedList<Character>();
 

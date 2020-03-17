@@ -14,6 +14,7 @@ public class Lab_1 {
 		stack.push('3');
 		stack.push('4');
 		stack.push('5');
+
 		Queue<Character> queue = new LinkedList<Character>();
 		
 		System.out.println("Elements in stack before moving into Queue\nStack:"+stack+" \nQueue:"+queue);

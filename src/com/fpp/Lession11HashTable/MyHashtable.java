@@ -31,7 +31,6 @@ public class MyHashtable {
 
 		// compress down to a table slot
 		int hash = hashM(hashcode);
-
 		// put the value and the key into an Entry object
 		// which will be placed in the table in the
 		// slot ( namely, hash)
@@ -86,15 +85,79 @@ public class MyHashtable {
 				Entry next = null;
 				while (it.hasNext()) {
 					next = (Entry) it.next();
-					sb.append(next);
+					sb.append(next + n);
 				}
 			}
 		}
 		return sb.toString();
 	}
 
+	/**
+	 * 
+	 * @return int (Total number of entries entered into the table)
+	 */
+	public int countEntry() {
+
+		int count = 0;
+		for (int i = 0; i < table.length; ++i) {
+			if (table[i] != null) {
+				Iterator it = table[i].iterator();// For the LinkedList at table[i]
+				while (it.hasNext()) {
+					count++;
+					it.next();
+				}
+			}
+		}
+		return count;
+	}
+
+	/**
+	 * 
+	 * @return null of there is no data found in the table
+	 */
+	public String getElementsInLongestLinkedList() {
+
+		int count;
+		LinkedList list = null;
+		for (int i = 0; i < table.length; ++i) {
+			if (table[i] != null) {
+				count = 0;
+				if (list == null) {
+					list = table[i];
+				} else if (table[i].size() > list.size()) {
+					list = table[i];
+				}
+			}
+		}
+		if (list == null) {
+			return null;
+		} else {
+			StringBuffer returnStr = new StringBuffer();
+			Iterator it = list.iterator();
+			while (it.hasNext()) {
+				returnStr.append(it.next() + "\n");
+			}
+			return returnStr.toString();
+
+		}
+	}
+
+	public int getNumberOfEmptyCell() {
+
+		int count = 0;
+		for (int i = 0; i < table.length; ++i) {
+			if (table[i] == null) {
+				count++;
+			}
+		}
+		return count;
+	}
+
 //In the java file this method might be called hash
 	private int hashM(int bigNum) {
+		if (bigNum < 0) {
+			bigNum *= (-1);
+		}
 		return bigNum % tableSize;
 	}
 
