@@ -10,7 +10,7 @@ public class Main {
 		myStringLinkedList.addLast("j");
 		myStringLinkedList.addLast("k");
 		
-//		myStringLinkedList.deleteFirst();
+		myStringLinkedList.deleteLast();
 		
 		System.out.println(myStringLinkedList);
 		
