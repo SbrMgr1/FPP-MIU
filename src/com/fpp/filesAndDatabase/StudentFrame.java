@@ -160,7 +160,7 @@ public class StudentFrame extends javax.swing.JFrame
 				id = rs.getString("StudentID");
 				name = rs.getString("StudentName");
                 
-                System.out.println("Student ID is " + id + "   Student Name is " + name);
+                System.out.println("Student ID is " + id + "   Student Name is " + name + " Age "+rs.getString("age"));
                 
 		    }
 		} catch (SQLException ex) {
